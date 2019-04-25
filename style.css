@@ -1,54 +1,218 @@
+@import url(https://use.fontawesome.com/releases/v5.0.6/css/all.css);
+
 html, body {
   padding: 0;
   margin: 0;
-  height: 100%;
-  background-color: blanchedalmond;
   font-family: 'Roboto', sans-serif;
+}
+
+/* TOGGLEBAR */
+/* .hide {
+  display: flex;
+}
+
+
+#offcanvas-left {
+    flex: 0 0 280px;
+    background-color: #111;
+    color: white;
+    transition-duration: .5s;
+}
+#offcanvas-left.hide {
+    margin-left: -280px;
+}
+
+.togglebar {
+  background-color: #232323;
+  flex: 0 0;
+  min-width: 70px;
+  max-width: 5px;
+}
+
+.toggle i {
+  height: 80px;
+  font-size: 1.4em;
+  width: 100%;
+  color: whitesmoke;
+  display: flex;   
+  align-items: center;
+  justify-content: center;
+  background-color: #111;
+}
+
+.toggle i:hover {
+  color: gray;
+} */
+
+/* NAVBAR */
+nav ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  background: #6814c7;
+  padding: 30px;
+  margin-bottom: 0;
+}
+
+nav li {
+  list-style: none;
+  color: white;
+  font-weight: lighter;
+  text-transform: uppercase;
+}
+
+nav a, .hide {
+  color: white;
+  text-decoration: none;
+}
+
+/* HERO */
+#hero {
+  background: url(https://pixabay.com/images/download/home-office-336373_1920.jpg) no-repeat scroll center;
+  background-size: cover;
+  height: 400px;
+  width: 100%;
+  display: grid;
+  align-items: center;
+}
+
+#hero p {
+  font-size: 3rem;
+  background: rgba(200, 200, 200, 0.3);
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+}
+
+/* ARTICLE */
+#article {
+  padding: 2rem 10%;
+}
+
+#article h1 {
+  color: rgb(104, 20, 199);
+  font-size: 3rem;
+  margin: 1rem 0;
+}
+
+hr {
+  border: 0;
+  height: 1.5px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(104, 20, 199, 0.7), rgba(0, 0, 0, 0));
+}
+
+#article p {
+  font-size: 1.2rem;
+}
+
+#article blockquote {
+  font-size: 1.25rem;
+  color: gray;
+  /* margin-left: -10px; */
+  padding-left: 15px;
+  border-left: rgba(104, 20, 199, 0.5) solid 5px;
+}
+
+#article .table {
+  display: grid;
   text-align: center;
 }
 
-body {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
+#article thead {
+  background: #d6d6d6;
+}
+
+#article tr {
+  height: 35px;
+}
+
+#article .img {
+  text-align: center;
+}
+
+#article img {
+  width: 20%;
+}
+
+/* FOOTER */
+footer {
+  background: #f2dc6d;
+  padding: 30px 10%;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-areas:
+    'h c'
+    'i c';
+  justify-items: center;
+}
+
+footer th, footer td {
+  height: 40px;
+  text-align: center;
+}
+
+#hour {
+  grid-area: h;
+  width: 200px;
+}
+
+#info {
+  grid-area: i;
+  width: 200px;
+}
+
+#contact {
+  grid-area: c;
+  display: grid;
+}
+
+#contact legend {
+  font-size: 1.1rem;
   font-weight: bold;
+  margin-bottom: 10px;
 }
 
-header {
-  background: plum;
-  padding: 20px;
-}
-
-nav {
-  background: pink;
-  display: flex;
-  /* flex-grow: 1; */
-  justify-content: center;
+#contact input, #contact textarea, #contact button {
   padding: 10px;
   border-radius: 5px;
+  border: none;
+  margin-bottom: 3px;
+}
+
+#contact textarea {
+  resize: none;
+}
+
+#contact button {
   color: white;
+  font-weight: bold;
+  letter-spacing: 0.2rem;
+  background: rgb(104, 20, 199);
+  padding: 15px;
+  cursor: pointer;
 }
 
-section {
-  height: 100%;
-  display: grid;
-  grid-gap: 10px;
-  grid-template-columns: 4fr 1fr;
+#contact button:hover, footer + span:hover {
+  color: white;
+  background: rgb(154, 20, 249);
 }
 
-article {
-  background: #dfdfdf;
-  padding: 20px;
-  margin: 20px;
-  border-radius: 5px;
+footer + span {
+  background: rgb(104, 20, 199);
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
 }
 
-aside {
-  background: steelblue;
-  padding: 20px;
-}
-
-footer {
-  background: gold;
-  padding: 20px;
+footer + span a {
+  color: white;
+  font-size: 1.5rem;
+  text-decoration: none;
+  position: relative;
+  left: 13px;
+  top: 3px;
 }

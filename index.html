@@ -5,43 +5,133 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>HTML Layout</title>
+  <title>Learning HTML</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+  <!-- <div id="offcanvas-left" class="hide">
+    <ul>
+      <li><a href="#navbar">Top</a></li>
+      <li><a href="#quote">Quote</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+    </ul>
+  </div>
+
+  <div class="togglebar">
+    <div class="toggle">
+      <i class="fa fa-bars"></i>
+    </div>
+  </div> -->
+
   <header>
-    <nav>
-      Navigation
+    <nav id="navbar">
+      <ul>
+        <li><a href="#navbar">Top</a></li>
+        <li><a href="#quote">Quote</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
     </nav>
   </header>
 
-  <section>
+  <section id="hero">
+    <p>Learning HTML</p>
+  </section>
+
+  <section id="article">
     <main>
       <article>
-        Article
+        <h1>What is HTML?</h1>
+        <hr>
+        <p>Hypertext Markup Language (HTML) is the standard markup language for creating web pages and web applications.
+          With Cascading Style Sheets (CSS) and JavaScript, it forms a triad of cornerstone technologies for the World
+          Wide Web.</p>
+        <p>Web browsers receive HTML documents from a web server or from local storage and render them into multimedia
+          web pages. HTML describes the structure of a web page semantically and originally included cues for the
+          appearance of the document.</p>
+        <blockquote id="quote">
+          "Every great developer you know got there by solving problems they were unqualified to solve until they
+          actually
+          did it." - Patrick McKenzie
+        </blockquote>
+        <p>To build websites, you should know about HTML — the fundamental technology used to define the structure of a webpage. HTML is used to specify whether your web content should be recognized as a paragraph, list, heading, link, image, multimedia player, form, or one of many other available elements or even a new element that you define.</p>
+        <p class="img"><img src="https://pixabay.com/images/download/logo-2582748_1920.png" alt="html logo"></p>
       </article>
-      <article>
-        Article
-      </article>
-      <article>
-        Article
-      </article>
-      <article>
-        Article
-      </article>
+
+      <div class="table">
+        <table>
+          <thead>
+            <tr>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Email</th>
+            </tr>
+          </thead>
+          <tbody>
+            <col span="2" style="background: #f44141;">
+            <col style="background: #4286f4;">
+            <tr>
+              <td>John</td>
+              <td>Doe</td>
+              <td>Johnny.doe@gmail.com</td>
+            </tr>
+            <tr>
+              <td>Jane</td>
+              <td>Doe</td>
+              <td>Jane.Doe@gmail.com</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </main>
-    <aside>
-      Aside
-    </aside>
   </section>
 
   <footer>
-    Footer
+    <table id="hour">
+      <thead>
+        <tr>
+          <th colspan="2">Working Hours</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Mon-Fri</td>
+          <td>Sat-Sun</td>
+        </tr>
+        <tr>
+          <td>7am-6pm</td>
+          <td>Closed</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="info">
+      <thead>
+        <tr>
+          <th colspan="2">Contact Info</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Cell: </td>
+          <td>123.456.7890</td>
+        </tr>
+        <tr>
+          <td>Email: </td>
+          <td>info@learninghtml.com</td>
+        </tr>
+      </tbody>
+    </table>
+    <form id="contact"  method="get" action="#navbar">
+      <legend>Contact Us</legend>
+      <input type="text" name="name" placeholder="Full Name">
+      <input type="text" class="form" name="email" placeholder="Email">
+      <textarea cols="30" rows="10" name="message" placeholder="Write Your Message Here"></textarea>
+      <button>SUBMIT</button>
+    </form>
   </footer>
+  <span><a href="#navbar">⬆</a></span>
 
-  <script src="index.js"></script>
 </body>
 
 </html>
